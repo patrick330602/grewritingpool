@@ -7,5 +7,12 @@ def fetch_pool():
     base_req.encoding = 'utf-8'
     base_res = base_req.text
     base_soup = bs(base_res,'lxml')
-    return base_soup
+    
+    first_seperator = (base_soup.select("div.divider-50"))[0]
+    for item in first_seperator.next_siblings:
+        if repr(item) == '\n':
+            continue
+        if repr(item) == "<h2>See also:</h2>":
+            break
+        print(repr(item))
 
