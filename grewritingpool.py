@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import getopt
 import json
 import requests
 from bs4 import BeautifulSoup as bs
@@ -22,10 +23,10 @@ def fetch_pool(writing_type):
         elif repr(item).startswith("<h2>"):
             break
         elif status == 1 and item.name == "p":
-            tmp['qfirst']  = item.contents[0]
+            tmp['first']  = item.contents[0]
             status = 2
         elif status == 2 and item.name == "p":
-            tmp['qsecond'] = item.contents[0]
+            tmp['second'] = item.contents[0]
             status = 2
         elif status == 2 and item.name == "div":
             status = 3
@@ -35,6 +36,14 @@ def fetch_pool(writing_type):
             tmp = {}
             status = 1
     return pool
+
+def save_json(name, data):
+    '''
+    Save file as json
+    '''
+    with open(name+'.json', 'w') as outfile:
+        json.dump(data, outfile)
+    return 0
 
 def fetch_type(fetchtype, isSave):
     try:
@@ -47,15 +56,24 @@ def fetch_type(fetchtype, isSave):
     except ValueError as err:
         print(err.args)
 
-def save_json(name, data):
-    with open(name+'.json', 'w') as outfile:
-        json.dump(data, outfile)
-
-def main(args):
-    if len(args) == 1:
-
-    file = fetch_pool()
-    
+def main(argv):
+    isSave = 1
+    try:
+        opts, args = getopt.getopt(argv,"hs:",["save="])
+        if len(args) != 1:
+            raise ValueError("No input or invalid input, aborted.") 
+    except ValueError as err:
+        print(err.args)
+    except getopt.GetoptError:
+        print('grewritingpool.py -s <isSave> [argument|pool|all]')
+        sys.exit(2)
+    for opt, arg in opts:
+        if opt == '-h':
+            print('grewritingpool.py -s <isSave> [argument|pool|all]')
+            sys.exit()
+        elif opt in ("-s", "--save"):
+            isSave = int(arg)
+    fetch_type(args[0], isSave)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
