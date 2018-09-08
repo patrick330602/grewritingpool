@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='grewritingpool',
-    version='0.0.3',
+    version='0.0.4',
     description='Python Web Sidper for GRE Writing Pool',
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -10,8 +10,8 @@ Because why not?
 
 As a API:
 ```python3
-from grewritingpool import pool
-json = pool.fetch_type("issue")
+from grewritingpool import fetch
+json = fetch.fetch_type("issue")
 ```
 
 As a executable:

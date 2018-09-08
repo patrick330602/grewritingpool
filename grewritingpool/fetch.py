@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-
-import sys
-import getopt
 import json
 import requests
 from bs4 import BeautifulSoup as bs
@@ -93,17 +89,3 @@ def download_type(fet):
             raise ValueError("Invalid Fetch Type "+fet+".")
     except ValueError as err:
         print(err.args)
-
-def main(args):
-    if len(args) == 1:
-        if args[0] in ("-h", "--help"):
-            print("grewritingpool.py [all|issue|argument]")
-            sys.exit()
-        else:
-            download_pool(args[0])
-    else:
-        print("grewritingpool.py [all|issue|argument]")
-        sys.exit(1)
-
-if __name__ == "__main__":
-    main(sys.argv[1:])
