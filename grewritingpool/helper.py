@@ -12,8 +12,17 @@ def random_article(writing_type):
     return writingitem
 
 def print_random_article(writing_type):
+    writingitem = ""
+    if writing_type == 'default':
+        writing_type = 'all'
+        print("Writing type not set, default to 'all'...\n")
+    if writing_type == 'all':
+        secure_random = random.SystemRandom()
+        writing_type = secure_random.choice(['argument','issue'])
+        writingitem = random_article(writing_type)
+    elif writing_type in ('argument','argument'):
+        writingitem = random_article(writing_type)
     print('From '+writing_type+' pool\n')
-    writingitem = random_article(writing_type)
     print('Question:')
     print(writingitem['first'])
     if 'second' in writingitem.keys():
