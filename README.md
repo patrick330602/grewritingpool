@@ -1,10 +1,13 @@
-# Python Web Sidper for GRE Writing Pool
+# Helper for GRE Writing Pool
 
 Because why not?
 
 ## Install
 
 `pip install grewritingpool`
+
+or install from source:
+`python3 setup.py install`
 
 ## Usage
 
@@ -16,7 +19,7 @@ json = fetch.fetch_type("issue")
 
 As a executable:
 ```bash
-grewritingpool.py [all|issue|argument]
+grewriting [all|issue|argument]
 ```
 
 ## License
