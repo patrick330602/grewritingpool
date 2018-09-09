@@ -7,10 +7,9 @@ def main(args):
             print("grewriting [all|issue|argument]")
             sys.exit()
         else:
-            grewritingpool.helper.print_random_article(args[0])
+            grewritingpool.helper._print_random_article(args[0])
     elif len(args) == 0:
-        grewritingpool.helper.print_random_article('default')
+        grewritingpool.helper._print_random_article()
     else:
         print("grewritingpool.py [all|issue|argument]")
         sys.exit(1)
-
