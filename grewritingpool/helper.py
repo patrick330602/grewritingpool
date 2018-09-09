@@ -64,7 +64,7 @@ def _print_random_article(writing_type = 'default'):
             secure_random = random.SystemRandom()
             writing_type = secure_random.choice(['argument','issue'])
             writingitem = _random_article(writing_type)
-        elif writing_type in ('argument','argument'):
+        elif writing_type in ('issue','argument'):
             writingitem = _random_article(writing_type)
         else:
             raise ValueError("Invalid Fetch Type "+writing_type+".")
