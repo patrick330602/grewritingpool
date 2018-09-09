@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='grewritingpool',
-    version='0.0.6',
+    version='0.0.8',
     description='Helper for GRE Writing Pool',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -13,6 +13,8 @@ setup(
     packages=['grewritingpool'],
     author='callmepk',
     author_email='wotingwu@live.com',
+    python_requires='>=3.5',
+    scripts=['scripts/grewriting'],
     install_requires=[
           'lxml','beautifulsoup4','requests'
       ],

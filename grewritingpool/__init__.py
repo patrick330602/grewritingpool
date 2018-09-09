@@ -24,7 +24,6 @@ def get_list(writing_type = "dafault"):
     except ValueError as err:
         logging.exception(err)
 
-
 def get_random(writing_type = 'default'):
     """
     get a json list of all or certain writing type.
