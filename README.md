@@ -11,7 +11,13 @@ or install from source:
 
 ## Usage
 
-Returned json by get_list():
+### As a API
+
+**get_list(writing_type='default')**
+
+return a json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
+
+Returned json format:
 ```json
 [
     {
@@ -24,7 +30,10 @@ Returned json by get_list():
 ]
 ```
 
-Returned json by get_random():
+**get_random(writing_type='default')**
+return a random json string from the json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
+
+Returned json format:
 ```json
 {
     'type': <writing type>,
@@ -34,16 +43,9 @@ Returned json by get_random():
 }
 ```
 
-As a API:
-```python3
-import grewritingpool as gwp
-//returns a json list of arguments
-list = gwp.get_list('arguement')
-//returns a json of article from all article
-list = gwp.get_random()
-```
+### As a executable
 
-As a executable:
+> Currently cannot run on Windows 10
 ```bash
 grewriting [all|issue|argument]
 ```
