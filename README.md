@@ -15,10 +15,10 @@ or install from source:
 
 **get_list(writing_type='default')**
 
-return a json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
+Return a json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
 
 Returned json format:
-```json
+```
 [
     {
         'type': <writing type>,
@@ -31,10 +31,11 @@ Returned json format:
 ```
 
 **get_random(writing_type='default')**
-return a random json string from the json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
+
+Return a random json string from the json list of articles. Input can be `all`, `issue` or `argument`, default to `all`.
 
 Returned json format:
-```json
+```
 {
     'type': <writing type>,
     'first': <first part of the question>,
@@ -45,7 +46,8 @@ Returned json format:
 
 ### As a executable
 
-> Currently cannot run on Windows 10
+> Currently do not support Windows 10
+
 ```bash
 grewriting [all|issue|argument]
 ```
