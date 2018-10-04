@@ -46,8 +46,6 @@ Returned json format:
 
 ### As a executable
 
-> Currently do not support Windows 10
-
 ```bash
 grewriting [all|issue|argument]
 ```
