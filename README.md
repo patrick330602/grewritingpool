@@ -1,5 +1,7 @@
 # Helper for GRE Writing Pool
 
+[![pypi](https://flat.badgen.net/pypi/v/grewritingpool)](https://pypi.org/project/grewritingpool/)
+
 Because why not?
 
 ## Install
