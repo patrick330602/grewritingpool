@@ -2,7 +2,7 @@ import random
 import json
 import logging
 
-import grewritingpool.helper as gwp
+import grewritingpool.main as gwp
 
 def get_list(writing_type = "dafault"):
     """
