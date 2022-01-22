@@ -18,7 +18,7 @@ def main(args):
     elif len(args) == 0:
         _print_random_article()
     else:
-        print("grewritingpool.py [all|issue|argument]")
+        print("grewriting [all|issue|argument]")
         sys.exit(1)
 
 
