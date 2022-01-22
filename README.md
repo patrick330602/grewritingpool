@@ -54,4 +54,4 @@ grewriting [all|issue|argument]
 
 ## License
 
-MIT because I am lazy.
+GPLv3.
