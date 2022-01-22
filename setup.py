@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
     name='grewritingpool',
-    version='0.2',
+    version='0.2.1',
     description='Helper for GRE Writing Pool',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    license='MIT',
+    license='GPLv3',
     packages=['grewritingpool'],
     author='Patrick Wu',
     author_email='me@patrickwu.space',
