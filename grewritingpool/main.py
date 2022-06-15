@@ -24,7 +24,8 @@ def main(args):
 
 def _fetch_pool(writing_type):
     base_req = requests.get(
-        "https://www.ets.org/gre/revised_general/prepare/analytical_writing/"+writing_type+"/pool")
+        "https://www.ets.org/gre/revised_general/prepare/analytical_writing/" +
+        writing_type + "/pool")
     base_req.encoding = 'utf-8'
     base_res = base_req.text
     base_soup = bs(base_res, 'lxml')

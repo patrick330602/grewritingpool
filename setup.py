@@ -14,11 +14,13 @@ setup(
     author='Patrick Wu',
     author_email='me@patrickwu.space',
     python_requires='>=3.5',
-    scripts=['scripts/grewriting','scripts/grewriting.cmd'],
+    scripts=['scripts/grewriting', 'scripts/grewriting.cmd'],
     install_requires=[
-          'lxml','beautifulsoup4','requests'
+        'lxml',
+        'beautifulsoup4',
+        'requests',
       ],
-    keywords=['gre','writing'],
+    keywords=['gre', 'writing'],
     classifiers=[
         "Environment :: Console",
         "Topic :: Education",
@@ -26,7 +28,7 @@ setup(
         "Operating System :: POSIX :: Linux",
         "Operating System :: Microsoft :: Windows",
         "Operating System :: MacOS :: MacOS X",
-        "Programming Language :: Python :: 3 :: Only"
+        "Programming Language :: Python :: 3 :: Only",
     ],
     url='https://github.com/patrick330602/grewritingpool'
 )

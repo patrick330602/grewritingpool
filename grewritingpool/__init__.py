@@ -4,7 +4,7 @@ import logging
 
 import grewritingpool.main as gwp
 
-def get_list(writing_type = "dafault"):
+def get_list(writing_type = "default"):
     """
     get a list of all or certain writing type.
 
