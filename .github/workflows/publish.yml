@@ -2,7 +2,7 @@ name: CD
 on:
   push:
     tags:
-      - *
+      - v0.*
 jobs:
   build:
     name: Publish
